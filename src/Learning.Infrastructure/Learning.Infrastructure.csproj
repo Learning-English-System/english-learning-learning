@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.12">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Confluent.Kafka" Version="2.8.0" />
+    <PackageReference Include="StackExchange.Redis" Version="2.8.31" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Learning.Domain\Learning.Domain.csproj" />
+    <ProjectReference Include="..\Learning.Contracts\Learning.Contracts.csproj" />
+    <ProjectReference Include="..\Learning.Application\Learning.Application.csproj" />
+    <PackageReference Include="EnglishLearning.BuildingBlocks.Messaging" Version="1.0.0" />
+    <PackageReference Include="EnglishLearning.BuildingBlocks.Observability" Version="1.0.0" />
+    <PackageReference Include="EnglishLearning.BuildingBlocks.Grpc" Version="1.0.0" />
+  </ItemGroup>
+
+</Project>
